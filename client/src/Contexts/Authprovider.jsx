@@ -56,7 +56,7 @@ const Authprovider = ({ children }) => {
 
                 // Get JWT token
                 await axios.post(
-                    `http://localhost:3000/jwt`,
+                    `https://lost-and-found-full-stack.vercel.app/jwt`,
                     {
                         email: currentUser?.email,
                     },
@@ -64,7 +64,7 @@ const Authprovider = ({ children }) => {
                 )
             } else {
                 setSaveUser(currentUser)
-                await axios.get(`http://localhost:3000/logout`, {
+                await axios.get(`https://lost-and-found-full-stack.vercel.app/logout`, {
                     withCredentials: true,
                 })
             }

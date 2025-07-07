@@ -14,7 +14,7 @@ const useAxiosSecure = () => {
     const token = saveUser?.accessToken
     //   intercept requests
     axiosInstance.interceptors.request.use(config => {
-        config.headers.Authorization = `Bearer ${token}`
+        config.headers.Authorization = `bearer ${token}`
 
         return config
     })

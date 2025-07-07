@@ -132,7 +132,7 @@ async function run() {
             }
         });
 
-        app.get("/allItems", async (req, res) => {
+        app.get("/allItems", verifyToken, async (req, res) => {
             try {
                 const { email } = req.query;
                 let query = {};

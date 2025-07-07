@@ -14,7 +14,7 @@ const AddItem = () => {
     const navigate = useNavigate();
 
     const formSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         if (!saveUser?.email) {
             Swal.fire('Error', 'Please login to add an item', 'error');

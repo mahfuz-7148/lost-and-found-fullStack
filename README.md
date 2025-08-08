@@ -1,6 +1,6 @@
 # 🔍 WhereIsIt - Lost & Found Platform
 
-
+![App Screenshot](https://i.postimg.cc/HLx3JJfq/lost-found.png)
 
 ## 📋 Project Overview
 

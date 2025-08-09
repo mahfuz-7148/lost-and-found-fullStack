@@ -11,6 +11,9 @@ import MyItems from '../Pages/MyItems.jsx';
 import DetailsItem from '../Pages/DetailsItem.jsx';
 import RecoveryItems from '../Pages/RecoveryItems.jsx';
 import UpdateItems from '../Pages/UpdateItems.jsx';
+import About from '../Pages/About.jsx';
+import Contact from '../Pages/Contact.jsx';
+import Blogs from '../Pages/Blogs.jsx';
 
 
 export const router = createBrowserRouter([
@@ -25,6 +28,18 @@ export const router = createBrowserRouter([
             {
                 path: '/allItems',
                 Component: LostAndFound,
+            },
+            {
+                path: '/about',
+                Component: About,
+            },
+            {
+                path: '/contact',
+                Component: Contact,
+            },
+            {
+                path: '/blogs',
+                Component: Blogs,
             },
             {
                 path: '/addItems',

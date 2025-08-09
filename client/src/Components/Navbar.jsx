@@ -11,7 +11,10 @@ import {
     SearchOutlined,
     UserAddOutlined,
     LoginOutlined,
-    MenuOutlined
+    MenuOutlined,
+    InfoCircleOutlined,
+    ContactsOutlined,
+    ReadOutlined
 } from '@ant-design/icons';
 import { AuthContext } from '../Contexts/Authprovider.jsx';
 import { toast } from 'react-toastify';
@@ -100,6 +103,78 @@ const Navbar = () => {
                 >
                     <SearchOutlined />
                     Lost & Found Items
+                </NavLink>
+            ),
+        },
+        {
+            key: 'about',
+            label: (
+                <NavLink
+                    to="/about"
+                    onClick={handleMobileNavClick}
+                    style={({ isActive }) => ({
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        transition: 'all 0.3s ease',
+                        color: isActive ? '#ffffff' : '#d9d9d9',
+                        backgroundColor: isActive ? '#333333' : 'transparent',
+                        textDecoration: 'none',
+                        fontWeight: isActive ? '600' : '500',
+                    })}
+                >
+                    <InfoCircleOutlined />
+                    About
+                </NavLink>
+            ),
+        },
+        {
+            key: 'contact',
+            label: (
+                <NavLink
+                    to="/contact"
+                    onClick={handleMobileNavClick}
+                    style={({ isActive }) => ({
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        transition: 'all 0.3s ease',
+                        color: isActive ? '#ffffff' : '#d9d9d9',
+                        backgroundColor: isActive ? '#333333' : 'transparent',
+                        textDecoration: 'none',
+                        fontWeight: isActive ? '600' : '500',
+                    })}
+                >
+                    <ContactsOutlined />
+                    Contact
+                </NavLink>
+            ),
+        },
+        {
+            key: 'blogs',
+            label: (
+                <NavLink
+                    to="/blogs"
+                    onClick={handleMobileNavClick}
+                    style={({ isActive }) => ({
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        transition: 'all 0.3s ease',
+                        color: isActive ? '#ffffff' : '#d9d9d9',
+                        backgroundColor: isActive ? '#333333' : 'transparent',
+                        textDecoration: 'none',
+                        fontWeight: isActive ? '600' : '500',
+                    })}
+                >
+                    <ReadOutlined />
+                    Blogs
                 </NavLink>
             ),
         },
@@ -322,6 +397,72 @@ const Navbar = () => {
                 >
                     <SearchOutlined style={{ color: '#1677ff', fontSize: '18px' }} />
                     Lost & Found Items
+                </Link>
+            ),
+        },
+        {
+            key: 'mobile-about',
+            label: (
+                <Link 
+                    to="/about" 
+                    onClick={handleMobileNavClick}
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        color: '#262626',
+                        textDecoration: 'none',
+                        padding: '12px 0',
+                        fontSize: '16px',
+                        fontWeight: '500',
+                    }}
+                >
+                    <InfoCircleOutlined style={{ color: '#1677ff', fontSize: '18px' }} />
+                    About
+                </Link>
+            ),
+        },
+        {
+            key: 'mobile-contact',
+            label: (
+                <Link 
+                    to="/contact" 
+                    onClick={handleMobileNavClick}
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        color: '#262626',
+                        textDecoration: 'none',
+                        padding: '12px 0',
+                        fontSize: '16px',
+                        fontWeight: '500',
+                    }}
+                >
+                    <ContactsOutlined style={{ color: '#1677ff', fontSize: '18px' }} />
+                    Contact
+                </Link>
+            ),
+        },
+        {
+            key: 'mobile-blogs',
+            label: (
+                <Link 
+                    to="/blogs" 
+                    onClick={handleMobileNavClick}
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        color: '#262626',
+                        textDecoration: 'none',
+                        padding: '12px 0',
+                        fontSize: '16px',
+                        fontWeight: '500',
+                    }}
+                >
+                    <ReadOutlined style={{ color: '#1677ff', fontSize: '18px' }} />
+                    Blogs
                 </Link>
             ),
         },

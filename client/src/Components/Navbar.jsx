@@ -696,18 +696,8 @@ const Navbar = () => {
                                 role="button"
                                 style={{
                                     cursor: 'pointer',
-                                    padding: '4px',
-                                    borderRadius: '50%',
-                                    transition: 'all 0.3s ease',
-                                    border: '2px solid transparent',
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.target.style.transform = 'scale(1.1)';
-                                    e.target.style.borderColor = '#1677ff';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.target.style.transform = 'scale(1)';
-                                    e.target.style.borderColor = 'transparent';
+                                    padding: 0,
+                                    transition: 'transform 0.2s ease',
                                 }}
                             >
                                 <Badge dot color="#52c41a" offset={[-8, 8]}>

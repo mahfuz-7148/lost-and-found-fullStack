@@ -211,7 +211,7 @@ const TopItems = () => {
                             onClick={() => navigate(`/items/${item._id}`)}
                             className="mt-4 bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition duration-200 w-full font-medium"
                         >
-                          View Details
+                            See more
                         </motion.button>
                       </div>
                     </motion.div>

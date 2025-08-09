@@ -4,6 +4,7 @@ import Banner from '../Components/Banner.jsx';
 import TopItems from '../Components/TopItems.jsx';
 import ExtraOne from '../Components/ExtraOne.jsx';
 import ExtraTwo from '../Components/ExtraTwo.jsx';
+import Reviews from '../Components/Reviews.jsx';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <TopItems />
             <ExtraOne />
             <ExtraTwo />
+            <Reviews />
         </div>
     );
 };

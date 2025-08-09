@@ -4,6 +4,8 @@ import { RouterProvider } from 'react-router';
 import { router } from './Router/Routes.jsx';
 import Authprovider from './Contexts/Authprovider.jsx';
 import {ToastContainer} from 'react-toastify';
+import 'antd/dist/reset.css'; // For latest v5
+
 
 createRoot(document.getElementById('root')).render(
 

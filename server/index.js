@@ -13,7 +13,7 @@ const jwt = require('jsonwebtoken')
 // });
 
 const corsOptions = {
-    origin: ['https://lost-and-found-full-stack-mlo8.vercel.app'],
+    origin: ['http://localhost:5173'],
     credentials: true,
     optionSuccessStatus: 200,
 }

@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.14",
+    "antd": "^5.26.4",
     "axios": "^1.10.0",
     "firebase": "^11.8.0",
     "lottie-react": "^2.4.1",

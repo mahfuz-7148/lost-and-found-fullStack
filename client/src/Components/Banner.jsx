@@ -43,7 +43,7 @@ export default function Banner() {
 
     return (
         <div
-            className="relative w-screen mx-[calc(50%-50vw)] -mt-px h-[calc(100vh-72px)] overflow-hidden shadow-2xl"
+            className="relative w-screen with mx-[calc(49.5%-50vw)] h-[400px] sm:h-[500px] md:h-[650px] overflow-hidden shadow-2xl"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -104,20 +104,7 @@ export default function Banner() {
             >
                 <ChevronRightIcon className="w-8 h-8" />
             </button>
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
-                {banners.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrent(index)}
-                        className={`w-4 h-4 rounded-full transition-all duration-300 shadow-sm ${
-                            index === current
-                                ? 'bg-blue-500 scale-150'
-                                : 'bg-gray-300/60 hover:bg-gray-200/80'
-                        }`}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
-            </div>
+
             <style>
                 {`
                     @keyframes slideIn {

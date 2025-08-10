@@ -69,12 +69,15 @@ const TopItems = () => {
               </p>
               {saveUser && (
                   <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
                       onClick={() => navigate("/addItems")}
-                      className="bg-violet-600 text-white py-2 px-6 rounded-lg hover:bg-violet-700 transition duration-200 font-medium"
+                      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-2 text-white font-semibold shadow-md hover:from-violet-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-200"
                   >
-                    Add New Item
+                    <span>Add New Item</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clipRule="evenodd" />
+                    </svg>
                   </motion.button>
               )}
             </motion.div>
@@ -228,15 +231,15 @@ const TopItems = () => {
                   className="flex justify-center mt-10"
               >
                 <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
                     onClick={() => navigate("/allItems")}
-                    className="bg-violet-600 text-white py-3 px-8 rounded-lg hover:bg-violet-700 transition duration-200 flex items-center gap-2 font-medium"
+                    className="group inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3 text-white font-semibold shadow-md hover:from-violet-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-200"
                 >
                   <span>See All Lost & Found Items</span>
                   <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
+                      className="h-5 w-5 transform transition-transform duration-200 group-hover:translate-x-0.5"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                   >

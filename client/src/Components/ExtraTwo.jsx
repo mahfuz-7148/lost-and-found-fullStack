@@ -63,9 +63,12 @@ const ExtraTwo = () => {
                             </p>
                             <Link
                                 to="/success-stories"
-                                className="mt-4 inline-block text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                                className="group mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2 text-white font-semibold shadow-md hover:from-violet-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all"
                             >
-                                Read More
+                                <span>Read More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                </svg>
                             </Link>
                         </div>
                     </motion.div>
@@ -79,12 +82,12 @@ const ExtraTwo = () => {
             >
                 <Link
                     to="/allItems"
-                    className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-200 font-medium flex items-center gap-2"
+                    className="group inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3 text-white font-semibold shadow-md hover:from-violet-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all"
                 >
-                    View All Stories
+                    <span>View All Stories</span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
+                        className="h-5 w-5 transform transition-transform duration-200 group-hover:translate-x-0.5"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >

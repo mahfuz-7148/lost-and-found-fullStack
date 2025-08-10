@@ -15,7 +15,7 @@ const TopItems = () => {
     const fetchLatestItems = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("https://a11-lost-found-server.vercel.app/items?sort=date_desc&limit=6");
+        const response = await axios.get("https://lost-and-found-full-stack-uuaz.vercel.app/items?sort=date_desc&limit=6");
         const sorted = response.data.sort((a, b) => b.date.localeCompare(a.date));
         setItems(sorted.slice(0, 6));
       } catch (error) {

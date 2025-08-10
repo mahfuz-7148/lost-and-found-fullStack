@@ -16,7 +16,7 @@ const LostAndFound = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get("https://a11-lost-found-server.vercel.app/allItem", {
+        const response = await axios.get("https://lost-and-found-full-stack-uuaz.vercel.app/allItem", {
           params: { search: searchQuery, filter },
         });
         setFilteredItems(response.data);

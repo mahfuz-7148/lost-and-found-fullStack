@@ -56,7 +56,7 @@ const Authprovider = ({ children }) => {
 
                 // Get JWT token
             //     await axios.post(
-            //         `https://a11-lost-found-server.vercel.app/jwt`,
+            //         `https://lost-and-found-full-stack-uuaz.vercel.app/jwt`,
             //         {
             //             email: currentUser?.email,
             //         },
@@ -64,7 +64,7 @@ const Authprovider = ({ children }) => {
             //     )
             // } else {
             //     setSaveUser(currentUser)
-            //     await axios.get(`https://a11-lost-found-server.vercel.app/logout`, {
+            //     await axios.get(`https://lost-and-found-full-stack-uuaz.vercel.app/logout`, {
             //         withCredentials: true,
             //     })
             // }

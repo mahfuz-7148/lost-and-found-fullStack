@@ -60,7 +60,7 @@ const MyItems = () => {
 
         try {
             //console.log("Deleting item with ID:", id);
-            const response = await axios.delete(`https://a11-lost-found-server.vercel.app/items/${id}`);
+            const response = await axios.delete(`https://lost-and-found-full-stack-uuaz.vercel.app/items/${id}`);
             //console.log("Delete Response:", response.data);
 
             if (response.data.deletedCount > 0) {

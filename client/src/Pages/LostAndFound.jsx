@@ -42,7 +42,7 @@ const LostAndFound = () => {
           <title>Lost & Found</title>
         </Helmet>
         <div className="w-full">
-          <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
+          <h1 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
             All Lost & Found Items
           </h1>
 
@@ -85,7 +85,7 @@ const LostAndFound = () => {
                 {filteredItems.map((item) => (
                     <div
                         key={item._id}
-                        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105"
+                        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105 flex flex-col h-full"
                     >
                       <div className="w-full h-48 bg-gray-100 dark:bg-gray-700 rounded-t-xl overflow-hidden">
                         {item.thumbnail ? (
@@ -106,7 +106,7 @@ const LostAndFound = () => {
                         )}
                       </div>
 
-                      <div className="p-5 flex flex-col flex-grow">
+                      <div className="p-5 flex flex-col flex-1 items-start">
                         <div>
                           {item.status === 'Recovered' ? (
                               <span className="inline-block mb-2 px-3 py-1 text-sm font-semibold rounded-full bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-400">
@@ -125,18 +125,18 @@ const LostAndFound = () => {
                           )}
                         </div>
 
-                        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 line-clamp-1 mb-2">
+                        <h2 className="text-xl font-semibold text-gray-900 dark:text-white line-clamp-1 mb-2">
                           {item.title}
                         </h2>
 
-                        <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-2 mb-4">
+                        <p className="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 mb-4">
                           {item.description}
                         </p>
 
-                        <div className="mt-auto">
+                        <div className="mt-auto w-full">
                           <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center space-x-1">
-                            <span className="font-medium text-gray-700 dark:text-gray-300">Date & Time:</span>
-                            <span>
+                            <span className="font-medium text-gray-800 dark:text-gray-200">Date & Time:</span>
+                            <span className="text-gray-900 dark:text-gray-100">
                         {new Date(item.date).toLocaleString('en-BN', {
                           day: '2-digit',
                         })}{' '}
@@ -153,14 +153,17 @@ const LostAndFound = () => {
                               })}
                       </span>
                           </p>
-                          <p className="text-sm text-gray-600 dark:text-gray-300">
-                            <span className="font-medium">Location:</span> {item.location}
+                          <p className="text-sm text-gray-700 dark:text-gray-300">
+                            <span className="font-medium text-gray-800 dark:text-gray-200">Location:</span> <span className="text-gray-900 dark:text-gray-100">{item.location}</span>
                           </p>
                         </div>
 
                         <Link to={`/items/${item._id}`}>
-                          <button className="mt-4 bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition duration-200 w-full font-medium">
-                            See More
+                          <button className="group mt-4 w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2 text-white font-semibold shadow-md hover:from-violet-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-200">
+                            <span>See More</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
                           </button>
                         </Link>
                       </div>

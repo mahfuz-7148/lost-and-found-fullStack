@@ -52,7 +52,7 @@ const TopItems = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-8 text-center"
+            className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent"
         >
           Latest Lost & Found Items
         </motion.h2>
@@ -92,7 +92,7 @@ const TopItems = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1, duration: 0.5 }}
-                        className={`relative bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105 ${
+                        className={`relative bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105 flex flex-col h-full ${
                             index === 0 ? "border-2 border-violet-500" : ""
                         }`}
                     >
@@ -130,7 +130,7 @@ const TopItems = () => {
                         )}
                       </div>
 
-                      <div className="p-5 flex flex-col flex-grow">
+                      <div className="p-5 flex flex-col flex-1 items-start">
                         <div>
                           {item.status === "Recovered" ? (
                               <motion.span
@@ -161,7 +161,7 @@ const TopItems = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="text-xl font-semibold text-gray-800 dark:text-gray-100 line-clamp-1 mb-2"
+                            className="text-xl font-semibold text-gray-900 dark:text-white line-clamp-1 mb-2"
                         >
                           {item.title}
                         </motion.h3>
@@ -170,7 +170,7 @@ const TopItems = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="text-gray-600 dark:text-gray-300 text-sm line-clamp-2 mb-4"
+                            className="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 mb-4"
                         >
                           {item.description}
                         </motion.p>
@@ -179,11 +179,11 @@ const TopItems = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="mt-auto"
+                            className="mt-auto w-full"
                         >
                           <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center space-x-1">
-                            <span className="font-medium text-gray-700 dark:text-gray-300">Date & Time:</span>
-                            <span>
+                            <span className="font-medium text-gray-800 dark:text-gray-200">Date & Time:</span>
+                            <span className="text-gray-900 dark:text-gray-100">
                         {new Date(item.date).toLocaleString("en-BN", {
                           day: "2-digit",
                         })}{" "}
@@ -200,19 +200,21 @@ const TopItems = () => {
                               })}
                       </span>
                           </p>
-                          <p className="text-sm text-gray-600 dark:text-gray-300">
-                            <span className="font-medium">Location:</span> {item.location}
+                          <p className="text-sm text-gray-700 dark:text-gray-300">
+                            <span className="font-medium text-gray-800 dark:text-gray-200">Location:</span> <span className="text-gray-900 dark:text-gray-100">{item.location}</span>
                           </p>
                         </motion.div>
 
                         <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.97 }}
                             onClick={() => navigate(`/items/${item._id}`)}
-                            className="mt-4 bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition duration-200 w-full font-medium"
+                            className="group mt-4 w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2 text-white font-semibold shadow-md hover:from-violet-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-200"
                         >
-                            See More
-
+                            <span>See More</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
                         </motion.button>
                       </div>
                     </motion.div>

@@ -132,7 +132,7 @@ async function run() {
             }
         });
 
-        app.get("/allItems", verifyToken, async (req, res) => {
+        app.get("/allItems", async (req, res) => {
             try {
                 const { email } = req.query;
                 let query = {};
@@ -150,7 +150,7 @@ async function run() {
         });
 
 
-        app.post("/addItems", verifyToken, async (req, res) => {
+        app.post("/addItems", async (req, res) => {
             try {
                 const result = await itemsCollection.insertOne(req.body);
                 res.status(201).send({
@@ -176,7 +176,7 @@ async function run() {
             }
         });
 
-        app.get("/recoveredItems", verifyToken, async (req, res) => {
+        app.get("/recoveredItems", async (req, res) => {
             const email = req.query.email;
             const filter = { "recoveredBy.email": email }
             try {

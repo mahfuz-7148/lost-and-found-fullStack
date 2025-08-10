@@ -52,7 +52,7 @@ const TopItems = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent"
+            className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-gray-100 bg-clip-text "
         >
           Latest Lost & Found Items
         </motion.h2>

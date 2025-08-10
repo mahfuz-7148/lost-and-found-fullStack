@@ -57,8 +57,8 @@ const Rating = ({ value = 5 }) => (
 
 const Reviews = () => {
   return (
-    <section className="py-12 sm:py-16 mt-20 bg-base-100 text-base-content">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-16 mt-20 bg-base-100 text-base-content rounded-xl">
+      <div className="w-full">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             What our users say
@@ -72,7 +72,7 @@ const Reviews = () => {
           {reviews.map((r) => (
             <article
               key={r.id}
-              className="card bg-base-200/70 shadow-sm hover:shadow-md transition-shadow duration-200 border border-base-200"
+              className="card bg-base-200/70 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-base-200"
             >
               <div className="card-body">
                 <div className="flex items-center gap-4">

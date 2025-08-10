@@ -46,7 +46,7 @@ const TopItems = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+          className="w-full py-12"
       >
         <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
@@ -84,7 +84,7 @@ const TopItems = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6 }}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
               >
                 {items.map((item, index) => (
                     <motion.div
@@ -211,7 +211,7 @@ const TopItems = () => {
                             onClick={() => navigate(`/items/${item._id}`)}
                             className="mt-4 bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition duration-200 w-full font-medium"
                         >
-                            See more
+                            See More
                         </motion.button>
                       </div>
                     </motion.div>

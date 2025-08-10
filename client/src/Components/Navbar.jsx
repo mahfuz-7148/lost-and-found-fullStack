@@ -614,7 +614,7 @@ const Navbar = () => {
                 style={{
                     backgroundColor: '#2f3349',
                     boxShadow: '0 2px 16px rgba(0, 0, 0, 0.08)',
-                    padding: '0 32px',
+                    padding: '0',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
@@ -625,6 +625,7 @@ const Navbar = () => {
                     zIndex: 1000,
                 }}
             >
+                <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
                 {/* Logo */}
                 <div>
                     <Link
@@ -732,6 +733,7 @@ const Navbar = () => {
                             }}
                         />
                     )}
+                </div>
                 </div>
             </Header>
 

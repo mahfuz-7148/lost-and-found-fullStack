@@ -7,7 +7,7 @@ const ExtraOne = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="max-w-7xl mb-20 mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-gray-900 rounded-2xl shadow-xl"
+            className="w-full mb-20 py-16 bg-white dark:bg-gray-900 rounded-2xl shadow-xl"
         >
             <motion.h2
                 initial={{ opacity: 0, scale: 0.95 }}

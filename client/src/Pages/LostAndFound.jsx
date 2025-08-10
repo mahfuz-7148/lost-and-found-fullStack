@@ -37,11 +37,11 @@ const LostAndFound = () => {
   if (loading) return <Loading />;
 
   return (
-      <section className="min-h-screen bg-gray-100 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+      <section className="min-h-screen bg-gray-100 dark:bg-gray-900 w-full py-12">
         <Helmet>
           <title>Lost & Found</title>
         </Helmet>
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full">
           <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
             All Lost & Found Items
           </h1>
@@ -81,7 +81,7 @@ const LostAndFound = () => {
                 )}
               </div>
           ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {filteredItems.map((item) => (
                     <div
                         key={item._id}
@@ -160,7 +160,7 @@ const LostAndFound = () => {
 
                         <Link to={`/items/${item._id}`}>
                           <button className="mt-4 bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition duration-200 w-full font-medium">
-                            View Details
+                            See More
                           </button>
                         </Link>
                       </div>

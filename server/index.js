@@ -12,12 +12,12 @@ const jwt = require('jsonwebtoken')
 //     credential: admin.credential.cert(serviceAccount)
 // });
 
-const corsOptions = {
-    origin: ['https://lost-and-found-full-stack-mlo8.vercel.app'],
-    credentials: true,
-    optionSuccessStatus: 200,
-}
-app.use(cors(corsOptions))
+// const corsOptions = {
+//     origin: ['https://lost-and-found-full-stack-mlo8.vercel.app'],
+//     credentials: true,
+//     optionSuccessStatus: 200,
+// }
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 
@@ -42,21 +42,21 @@ app.use(cookieParser())
 //     }
 //     next()
 // }
-const verifyToken = async (req, res, next) => {
-    const token = req.cookies?.token
-
-    if (!token) {
-        return res.status(401).send({ message: 'unauthorized access' })
-    }
-    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
-        if (err) {
-            console.log(err)
-            return res.status(401).send({ message: 'unauthorized access' })
-        }
-        req.user = decoded
-        next()
-    })
-}
+// const verifyToken = async (req, res, next) => {
+//     const token = req.cookies?.token
+//
+//     if (!token) {
+//         return res.status(401).send({ message: 'unauthorized access' })
+//     }
+//     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+//         if (err) {
+//             console.log(err)
+//             return res.status(401).send({ message: 'unauthorized access' })
+//         }
+//         req.user = decoded
+//         next()
+//     })
+// }
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@lost-found.mmu9lkl.mongodb.net/?retryWrites=true&w=majority&appName=lost-found`;

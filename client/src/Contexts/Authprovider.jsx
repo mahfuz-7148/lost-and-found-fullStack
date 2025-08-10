@@ -51,23 +51,23 @@ const Authprovider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async currentUser => {
             console.log('CurrentUser-->', currentUser?.email)
-            if (currentUser?.email) {
+            // if (currentUser?.email) {
                 setSaveUser(currentUser)
 
                 // Get JWT token
-                await axios.post(
-                    `https://a11-lost-found-server.vercel.app/jwt`,
-                    {
-                        email: currentUser?.email,
-                    },
-                    { withCredentials: true }
-                )
-            } else {
-                setSaveUser(currentUser)
-                await axios.get(`https://a11-lost-found-server.vercel.app/logout`, {
-                    withCredentials: true,
-                })
-            }
+            //     await axios.post(
+            //         `https://a11-lost-found-server.vercel.app/jwt`,
+            //         {
+            //             email: currentUser?.email,
+            //         },
+            //         { withCredentials: true }
+            //     )
+            // } else {
+            //     setSaveUser(currentUser)
+            //     await axios.get(`https://a11-lost-found-server.vercel.app/logout`, {
+            //         withCredentials: true,
+            //     })
+            // }
             setLoading(false)
         })
         return () => {

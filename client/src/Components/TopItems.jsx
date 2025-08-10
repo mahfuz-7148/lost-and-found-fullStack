@@ -212,6 +212,7 @@ const TopItems = () => {
                             className="mt-4 bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition duration-200 w-full font-medium"
                         >
                             See More
+
                         </motion.button>
                       </div>
                     </motion.div>
